@@ -8,5 +8,8 @@ venv/
 .env.*
 !.env.example
 *.sqlite3
+*.joblib
+backend/generated_audit_dossier.pdf
+docs/Sample_Audit_Dossier.pdf
 dist/
 build/
