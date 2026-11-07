@@ -191,7 +191,7 @@ def test_api_workflow_end_to_end(db):
     # 1. Register User
     user = register(
         UserRegister(
-            email="lead.analyst@antigravity.io",
+            email="lead.analyst@gmail.com",
             password="SecurePassword123!",
             full_name="Lead Trust Analyst",
             role="admin"
@@ -199,7 +199,7 @@ def test_api_workflow_end_to_end(db):
         db=db
     )
     assert user.id is not None
-    assert user.email == "lead.analyst@antigravity.io"
+    assert user.email == "lead.analyst@gmail.com"
 
     # 2. Create Product
     product = create_product(

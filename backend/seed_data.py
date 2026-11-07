@@ -24,14 +24,14 @@ def seed_database():
         if db.query(User).count() == 0:
             print("[Seeder] Creating admin and analyst user accounts...")
             admin = User(
-                email="admin@antigravity.io",
+                email="admin@gmail.com",
                 hashed_password=hash_password("Admin@12345"),
                 full_name="Chief Information Security Officer",
                 role="admin",
                 is_active=True
             )
             analyst = User(
-                email="analyst@antigravity.io",
+                email="analyst@gmail.com",
                 hashed_password=hash_password("Analyst@12345"),
                 full_name="Lead Trust & Safety Auditor",
                 role="analyst",
@@ -39,8 +39,8 @@ def seed_database():
             )
             db.add_all([admin, analyst])
             db.commit()
-            print("  -> Admin: admin@antigravity.io / Admin@12345")
-            print("  -> Analyst: analyst@antigravity.io / Analyst@12345")
+            print("  -> Admin: admin@gmail.com / Admin@12345")
+            print("  -> Analyst: analyst@gmail.com / Analyst@12345")
 
         admin_user = db.query(User).first()
 

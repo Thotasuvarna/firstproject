@@ -38,10 +38,10 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess }) {
 
   const setDemoCredentials = (roleType) => {
     if (roleType === 'admin') {
-      setEmail('admin@antigravity.io');
+      setEmail('admin@gmail.com');
       setPassword('Admin@12345');
     } else {
-      setEmail('analyst@antigravity.io');
+      setEmail('analyst@gmail.com');
       setPassword('Analyst@12345');
     }
   };
@@ -164,7 +164,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess }) {
               required
               type="email"
               className="input"
-              placeholder="analyst@antigravity.io"
+              placeholder="analyst@gmail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
