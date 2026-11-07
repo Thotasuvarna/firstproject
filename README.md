@@ -85,6 +85,10 @@ fake-review-network-detector/
 
 ## 🚀 Quickstart Guide (How to Run)
 
+### Configure Security Secrets (Required)
+
+Copy `backend/.env.example` to `backend/.env` and replace both placeholder values with different, randomly generated secrets. The `.env` file is ignored by Git and must not be committed.
+
 ### Method 1: Using the 1-Click Launchers (Recommended for Beginners)
 
 1. **Seed the Database**:
