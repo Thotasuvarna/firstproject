@@ -18,6 +18,16 @@ if not exist "venv\Scripts\activate.bat" (
 
 call venv\Scripts\activate.bat
 
+if not exist ".env" (
+    echo Generating local backend secrets...
+    python -c "from pathlib import Path; import secrets; Path('.env').write_text('SECRET_KEY='+secrets.token_urlsafe(48)+'\nREVIEWER_HASH_SALT='+secrets.token_urlsafe(48)+'\n', encoding='utf-8')"
+    if errorlevel 1 (
+        echo ERROR: Could not generate backend secrets.
+        pause
+        exit /b 1
+    )
+)
+
 echo Starting server... Please wait...
 echo.
 python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
